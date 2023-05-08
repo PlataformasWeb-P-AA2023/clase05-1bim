@@ -1,6 +1,28 @@
 # Clase05-1bim
 
 ## Consumo de información de CouchDB desde flask
+### Datos de CouchDB
+* Tomar la información de https://gist.github.com/reroes/a7d0a43e2578336a64bd366caa244000 y crear una base de datos en CouchDB
+* Crear las siguientes vistas
+
+``` js
+# vista 1
+
+function (doc) {
+  if(doc.lenguaje){
+    emit(doc.lenguaje, doc);  
+  }
+
+}
+
+# vista 2
+function (doc) {
+  if(doc.lenguaje){
+    emit(doc._id, doc);
+  }
+}
+
+```
 
 ### Pasos para ejecutar
 
